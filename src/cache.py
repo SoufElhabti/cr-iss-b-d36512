@@ -10,3 +10,7 @@ def get(key, ttl=60):
 
 def put(key, value):
     _CACHE[key] = (value, time.time())
+
+def size():
+    # returns number of cached entries
+    return len(_CACHE)
